@@ -1,0 +1,77 @@
+body {
+  box-sizing: border-box;
+  background-color: #c83232;
+  font-family: "Lilita One", cursive;
+}
+
+.randomSuit {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+
+.card {
+  position: relative;
+  left: 25%;
+  top: 10%;
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg) translateY(0);
+  position: absolute;
+  width: 50vw;
+  aspect-ratio: calc(500/733);
+  border-radius: 34px;
+  transition: all 700ms;
+  border: 0.1px solid #522f3175;
+  cursor: pointer;
+  border-bottom-color: #933;
+  box-shadow: -10px 40px 20px 2px rgba(0, 0, 0, 0);
+  transform-style: preserve-3d;
+}
+
+@media (min-width: 1000px) {
+  .card {
+    width: 200px;
+    border-radius: 17px;
+    left: 45%;
+    top: 20%;
+  }
+}
+
+.card.opened {
+  transform: scale(1.5) rotateX(0) rotateY(180deg) rotateZ(0) translateY(0) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.card.is-removed {
+  transform: translateY(100%) !important;
+  z-index: 1;
+}
+
+.card:first-child {
+  box-shadow: 12px 12px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card.down:hover {
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg) translateZ(50px) !important;
+  box-shadow: -10px 40px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cards {
+  height: auto;
+  width: auto;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-size: cover;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
