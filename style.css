@@ -20,7 +20,7 @@ body {
   width: 50vw;
   aspect-ratio: calc(500/733);
   border-radius: 34px;
-  transition: all 700ms;
+  /*transition: all 700ms;*/
   border: 0.1px solid #522f3175;
   cursor: pointer;
   border-bottom-color: #522f3175;
