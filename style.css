@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  background-color: #c83232;
+  background-color: #962525;
   font-family: "Lilita One", cursive;
 }
 
@@ -15,6 +15,7 @@ body {
   left: 25%;
   top: 10%;
   transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg) translateY(0);
+  -webkit-transform: -webkit-rotateX(60deg) rotateY(0deg) rotateZ(-45deg) translateY(0);
   position: absolute;
   width: 50vw;
   aspect-ratio: calc(500/733);
@@ -22,7 +23,7 @@ body {
   transition: all 700ms;
   border: 0.1px solid #522f3175;
   cursor: pointer;
-  border-bottom-color: #933;
+  border-bottom-color: #522f3175;
   box-shadow: -10px 40px 20px 2px rgba(0, 0, 0, 0);
   transform-style: preserve-3d;
 }
@@ -38,12 +39,14 @@ body {
 
 .card.opened {
   transform: scale(1.5) rotateX(0) rotateY(180deg) rotateZ(0) translateY(0) !important;
+  -webkit-transform: -webkit-scale(1.5) -webkit-rotateX(0) -webkit-rotateY(180deg) -webkit-rotateZ(0) -webkit-translateY(0) !important;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
 .card.is-removed {
   transform: translateY(100%) !important;
+  -webkit-transform: -webkit-translateY(100%) !important;
   z-index: 1;
 }
 
