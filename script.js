@@ -17,6 +17,7 @@ for (i = 1; i < cardAmount; i++) {
 	var randomRot = -43 + Math.ceil(Math.random() * 3);
 	var card = document.querySelector(`.card:nth-child(${i})`);
 	card.style.transform = `rotateX(60deg) rotateY(0deg) rotateZ(${randomRot}deg) translateZ(${i * 2}px)`;
+	card.style.webkitTransform = `rotateX(60deg) rotateY(0deg) rotateZ(${randomRot}deg) translateZ(${i * 2}px)`;
 }
 
 $('.card').click(function () {
