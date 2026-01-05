@@ -80,11 +80,29 @@ body {
 }
 
 .card.opened {
-  transform: scale(1.5) rotateX(0) rotateY(180deg) rotateZ(0) translateY(0) !important;
+  /*transform: scale(1.5) rotateX(0) rotateY(180deg) rotateZ(0) translateY(0) !important;
   -webkit-transform: scale(1.5) rotateX(0) rotateY(180deg) rotateZ(0) translateY(0) !important;
-  
+  */
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   z-index: 2;
+}
+
+.card.opened>.card-face.back {
+  display: block;
+}
+
+.card.opened>.card-face.front {
+  display: none;
+}
+
+.card.is-removed>.card-face.back {
+  display: none;
+}
+
+.card.is-removed>.card-face.front {
+  display: block;
 }
 
 .card.is-removed {
@@ -120,8 +138,8 @@ body {
 }
 
 .back {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
+  /*transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);*/
 }
 
 .card-img {
