@@ -88,8 +88,8 @@ body {
   /*transform: scale(1.5) rotateX(0) rotateY(180deg) rotateZ(0) translateY(0) !important;
   -webkit-transform: scale(1.5) rotateX(0) rotateY(180deg) rotateZ(0) translateY(0) !important;
   */
-  transform: scale(1.5);
-  -webkit-transform: scale(1.5);
+  transform: scale(1.5) translateY(30%);
+  -webkit-transform: scale(1.5) translateY(30%);
   /*box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);*/
   z-index: 2;
 }
